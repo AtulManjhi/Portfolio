@@ -1,0 +1,246 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    {% include 'main/nav.html' %}
+    <div class="scroll-up-btn">
+        <b>^</b>
+    </div>
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Hello, My name is</div>
+                <div class="text-2">{{ Name }}</div>
+                <div class="text-3">And I'm a <span>{{ Occup }}.</span></div>
+                <a href="https://www.linkedin.com/in/atulmanjhi">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">About Me</h2>
+            <div class="about-content">
+                <div class="column left">
+                    {% load static %}
+                    <img src="{% static 'media\self.jpg' %}" alt="{{ Name }}">
+                </div>
+            <div class="column right">
+            <div class="text">I'm {{ Name }} and I'm a <span>{{ Occup }}.</span></div>
+                <p>{{ About_Me }}</p>
+                <a href="https://drive.google.com/file/d/1UqApjhodxzY6HHC3JwUfXtwxqN4XLvsc/view?usp=sharing">RESUME</a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">My Skills</h2>
+            <div class="skills-content">
+                <div class="column left">
+                    <div class="text">My top skills are:</div>
+                    <p>
+                        <ul>
+                            <li>Good command over programming languages like C, C++ and Python.</li>
+                            <li>Knowledge of data structure and database.</li>
+                            <li>Good knowledge of Django projects.</li>
+                            <li>Knowledge of web designing.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="column right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>Python</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="line python"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>C++</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line cpp"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="line html"></div>
+                    </div>
+                    <div class="bars"> 
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="line css"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>JavaScript</span>
+                            <span>55%</span>
+                        </div>
+                        <div class="line js"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>MySQL</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="line mysql"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="achievements" id="achievements">
+        <h2 class="title_ach">Courses & Certifications </h2> 
+        <div class="max-width">
+            <div class="container">
+            <div class="mySlides">
+              <img src="{% static 'media\cert1.jpg' %}">
+            </div>
+          
+            <div class="mySlides">
+              <img src="{% static 'media\cert2.png' %}">
+            </div>
+          
+            <div class="mySlides">
+              <img src="{% static 'media\cert3.png' %}">
+            </div>
+              
+            <div class="mySlides">
+              <img src="{% static 'media\cert4.jpg' %}">
+            </div>
+          
+            <div class="mySlides">
+              <img src="{% static 'media\cert5.jpg' %}">
+            </div>
+              
+            <div class="mySlides">
+              <img src="{% static 'media\cert6.jpg' %}">
+            </div>
+              
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          
+            <div class="row">
+              <div class="column1">
+                <img class="row_element" src="{% static 'media\cert1.jpg' %}" onclick="currentSlide(1)">
+              </div>
+              <div class="column1">
+                <img class="row_element" src="{% static 'media\cert2.png' %}" onclick="currentSlide(2)">
+              </div>
+              <div class="column1">
+                <img class="row_element" src="{% static 'media\cert3.png' %}" onclick="currentSlide(3)">
+              </div>
+              <div class="column1">
+                <img class="row_element" src="{% static 'media\cert4.jpg' %}" onclick="currentSlide(4)">
+              </div>
+              <div class="column1">
+                <img class="row_element" src="{% static 'media\cert5.jpg' %}" onclick="currentSlide(5)">
+              </div>    
+              <div class="column1">
+                <img class="row_element" src="{% static 'media\cert6.jpg' %}" onclick="currentSlide(6)">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact</h2>
+            <div class="contact-content">
+            <div class="column left">
+                <div class="icons">
+                    <div class="row">
+                        <span>&#x1F468;</span>
+                        <div class="info">
+                            <div class="head">Name</div>
+                            <div class="sub-title">{{ Name }}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span>&#128204;</span>
+                        <div class="info">
+                            <div class="head">Address</div>
+                            <div class="sub-title">{{ Address }}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span>&#128231;</span>
+                        <div class="info">
+                            <div class="head">E-Mail</div>
+                            <div class="sub-title">{{ Email }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column right">
+                <div class="text">Message Me</div>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="fields">
+                        <div class="field name">
+                            <input name="senders_name" type="text" placeholder="Name" required>
+                        </div>
+                        
+                        <div class="field email">
+                            <input name="senders_email" type="text" placeholder="E-Mail" required>
+                        </div>
+                    </div>
+                        <div class="field">
+                            <input name="subject" type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea name="content" cols="30" rows="10" placeholder="Content" required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Send Message</button>
+                        </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Created By : <span>AtulManjhi</span> | <span>&#9400;</span> All rights reserved.
+    </footer>
+    
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("row_element");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+            }
+          slides[slideIndex-1].style.display = "block";         
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+{% endblock %}
