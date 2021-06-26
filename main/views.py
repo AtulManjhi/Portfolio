@@ -40,6 +40,6 @@ def index(request):
         settings.EMAIL_HOST_USER,
         ['atulmanjhi05@gmail.com'],
         fail_silently=False)
-        return render(request,'main\index.html', context)
+        return render(request,'main/index.html', context)
 
-    return render(request, 'main\index.html', context)
+    return render(request, 'main/index.html', context)
