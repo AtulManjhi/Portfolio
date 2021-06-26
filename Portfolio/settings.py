@@ -21,13 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%m#_+i$*gzg7!4&2dqplj=gku^!arq-8utts9qwr6q50p4-bnw'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["atulmanjhi-portfolio.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -136,7 +136,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'myrunapp005@gmail.com'
-EMAIL_HOST_PASSWORD = 'India@Cric123'
+EMAIL_HOST_PASSWORD = os.environ['PASSWORD']
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
