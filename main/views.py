@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 
 # Create your views here.
@@ -35,13 +35,22 @@ def index(request):
 
         Message: {}
         '''.format(senders_name,senders_name,senders_email,subject,message)
-        send_mail("New message from Portfolio.",
-        message_to_be_sent,
+       # send_mail("New message from Portfolio.",
+       # message_to_be_sent,
+       # settings.EMAIL_HOST_USER,
+       # ['atulmanjhi05@gmail.com'],
+       # fail_silently=False,
+       # auth_user=settings.EMAIL_HOST_USER,
+       # auth_password='India@Cric123')
+
+        email = EmailMessage("New message form Portfolio.",
+        message,
         settings.EMAIL_HOST_USER,
-        ['atulmanjhi05@gmail.com'],
-        fail_silently=False,
-        auth_user=settings.EMAIL_HOST_USER,
-        auth_password='India@Cric123')
-        return render(request,'main/thanks.html', context)
+        ['atulmanjhi05@gmail.com'])
+        try:
+            email.send()
+            return render(request,'main/thanks.html', context)
+        except:
+            return render(request, 'main/index.html', context)
 
     return render(request, 'main/index.html', context)
