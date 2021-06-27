@@ -25,10 +25,4 @@ $(document).ready(function(){
         $('.bar2').toggleClass("switch");
         $('.bar3').toggleClass("switch");  
     });
-
-    $(window).resize(function(){
-        if($(window).width()<500){
-         $('.row').removeClass('row');
-        }
-       });
 });
