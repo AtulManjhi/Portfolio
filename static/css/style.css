@@ -449,14 +449,12 @@ section .title::after{
   .next {
     cursor: pointer;
     position: absolute;
-    top: 45%;
+    top: 40%;
     width: auto;
-    padding: 16px;
-    margin-top: -50px;
+    margin-top: -90px;
     color: crimson;
     font-weight: 700;
     font-size: 20px;
-    border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
   }
