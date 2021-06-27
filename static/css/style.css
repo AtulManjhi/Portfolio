@@ -419,10 +419,9 @@ section .title::after{
 }
 .achievements .max-width{
     background: #fff;
-    height: 570px;
+    height: 350px;
     margin-left: 0;
     margin-top: 0;
-    margin-bottom: 0;
     width: 100%;
     align-items: center;
 }
@@ -433,13 +432,11 @@ section .title::after{
   
   .mySlides {
     text-align: center;
-    height: 400px;
     transition: all 0.3s ease;
   }
   
 .mySlides > img {
     margin-top: 30px;
-    height: 350px;
     transition:all 1.0s ease-in-out;
 }
   
@@ -475,7 +472,8 @@ section .title::after{
     background-color: none;
     color: crimson;
   }
-  
+
+
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
