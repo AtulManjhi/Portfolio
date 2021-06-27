@@ -695,6 +695,7 @@ footer span{
 @media (max-width : 595px){
     .mySlides > img {
         height: 270px;
+        width: 400px;
     }
     .mySlides > img:hover {
         transform: scale(1);
