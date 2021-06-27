@@ -723,10 +723,10 @@ footer span{
     }
 @media (max-width : 595px){
     .mySlides > img {
-        height: 300px;
+        height: 270px;
     }
     .mySlides > img:hover {
-        transform: scale(1.1);
+        transform: scale(1);
     }
     .title_ach::before{
         width: 300px;

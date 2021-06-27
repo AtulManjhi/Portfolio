@@ -26,8 +26,9 @@ $(document).ready(function(){
         $('.bar3').toggleClass("switch");  
     });
 
-    $('.row_element').hover(
-        function(){ $(this).addClass('active') },
-        function(){ $(this).removeClass('active') }
- )
+    $(window).resize(function(){
+        if($(window).width()<500){
+         $('.row').removeClass('row');
+        }
+       });
 });
