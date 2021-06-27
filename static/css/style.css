@@ -478,10 +478,10 @@ section .title::after{
   }
   
   .column1 {
+    display: inline-block;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    display: inline-block;
     height: 100px;
   }
   
@@ -727,6 +727,9 @@ footer span{
     }
     .mySlides > img:hover {
         transform: scale(1.1);
+    }
+    .title_ach::before{
+        width: 300px;
     }
     .contact{
         margin-top: 200px;
