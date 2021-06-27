@@ -39,7 +39,7 @@ def index(request):
         message_to_be_sent,
         settings.EMAIL_HOST_USER,
         ['atulmanjhi05@gmail.com'],
-        fail_silently=True,
+        fail_silently=False,
         auth_user=settings.EMAIL_HOST_USER,
         auth_password='India@Cric123')
         return render(request,'main/thanks.html', context)
