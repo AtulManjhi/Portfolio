@@ -1,6 +1,6 @@
 {% extends 'main/base.html' %}
 {% block head %} 
-    <title>Thanks</title>
+    <title>Error</title>
     <style>
         body{
             background-image: linear-gradient(to bottom right, rgb(27, 27, 235) 7%, rgba(0,212,255,1) 100%);  
@@ -16,9 +16,12 @@
         }
         .parent > .child {
             display: table-cell;
-            vertical-align: middle;
-            font-family: 'Kanit', sans-serif;
             font-size: 3rem;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        span{ 
+            font-family: 'Kanit', sans-serif;
             color: #ffffff;
             font-weight: bold;
         }
@@ -28,7 +31,7 @@
 {% block content %}
 
 <section class="parent">
-    <div class="child">&#x1F642;<br>Thanks for your response.</div>
+    <div class="child">&#x1F641;<br><span>Server Error! <br>Message was not delivered. <br>Try again after sometime.</span></div>
 </section>
    
 {% endblock %}
