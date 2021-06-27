@@ -418,8 +418,7 @@ section .title::after{
     transform: translateX(-50%);
 }
 .achievements .max-width{
-    background: #fff;
-    height: 350px;
+    background: #ffffff;
     margin-left: 0;
     margin-top: 0;
     width: 100%;
@@ -432,6 +431,7 @@ section .title::after{
   
   .mySlides {
     text-align: center;
+    height: 350px;
     transition: all 0.3s ease;
   }
   
