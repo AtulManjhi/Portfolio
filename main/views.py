@@ -35,11 +35,7 @@ def index(request):
 
         Message: {}
         '''.format(senders_name,senders_name,senders_email,subject,message)
-        send_mail("New message from Portfolio.",
-        message_to_be_sent,
-        settings.EMAIL_HOST_USER,
-        ['atulmanjhi05@gmail.com'],
-        fail_silently=False)
-        return render(request,'main/index.html', context)
+        
+        return render(request,'main/thanks.html', context)
 
     return render(request, 'main/index.html', context)

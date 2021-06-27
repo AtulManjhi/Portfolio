@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% block head %} 
+    <title>Thanks</title>
+    <style>
+        body{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(27, 27, 235) 7%, rgba(0,212,255,1) 100%);    
+        }
+        html, body {
+            height: 100%;
+        }
+        .parent {
+            width: 100%;
+            height: 100%;
+            display: table;
+            text-align: center;
+        }
+        .parent > .child {
+            display: table-cell;
+            font-family: 'Kanit', sans-serif;
+            font-size: 3rem;
+            color: #ffffff;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<section class="parent">
+    <div class="child">Thanks for your response.</div>
+</section>
+   
+{% endblock %}
