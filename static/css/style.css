@@ -422,6 +422,7 @@ section .title::after{
     height: 570px;
     margin-left: 0;
     margin-top: 0;
+    margin-bottom: 0;
     width: 100%;
     align-items: center;
 }
@@ -451,7 +452,7 @@ section .title::after{
   .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 45%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -464,17 +465,15 @@ section .title::after{
   }
   .prev{
       left: 0;
-      border-radius: 10px 0 0 10px;
   }
   .next {
     right: 0;
-    border-radius: 0 10px 10px 0;
   }
   
   .prev:hover,
   .next:hover {
-    background-color: crimson;
-    color: #fff;
+    background-color: none;
+    color: crimson;
   }
   
 .contact .contact-content{
@@ -695,7 +694,7 @@ footer span{
 @media (max-width : 595px){
     .mySlides > img {
         height: 270px;
-        width: 400px;
+        width: 300px;
     }
     .mySlides > img:hover {
         transform: scale(1);
