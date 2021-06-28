@@ -50,7 +50,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
@@ -134,9 +133,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'myrunapp005@gmail.com'
-EMAIL_HOST_PASSWORD = 'India@Cric123'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@sandbox545c61aa52604b018591cfb4d1636f32.mailgun.org'
+EMAIL_HOST_PASSWORD = '3f0b37e7bfe54faa56fc37f44e9fe4b3-aff8aa95-c4b6b84f'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
